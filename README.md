@@ -1,40 +1,30 @@
-# Stock Summary Generator
+# AI News Agent POC
 
-This Python script generates a morning brief for stock (TCS) including current price, 52-week high/low, and relevant news summary using Gemini AI. The summary is then sent to a Telegram channel.
+This project automates the detection and summarization of material news events — earnings, management changes, and regulatory probes — for Indian equities.
 
-## Features
+## 🔍 Features
+- Detects key events using Google News RSS,News api
+- Summarizes headlines using AI prompt engineering
+- Filters for thesis-changing signals
+- Delivers updates to Telegram via GitHub Actions
 
-- Fetches real-time stock price data from Indian Stock Exchange API
-- Generates AI-powered summaries of stock news using Google's Gemini AI
-- Sends automated updates to Telegram
-- Supports custom configuration through settings file
+## 🛠️ Tech Stack
+- Python
+- GitHub Actions
+- Telegram Bot API
+- RSS Parsing
+- Prompt Engineering
 
-## Setup
+## 🚀 How to Run
+1. Clone the repo
+2. Install dependencies: `pip install -r requirements.txt`
+3. Configure your Telegram bot token and stock list
+4. Run: `python main.py`
 
-1. Install requirements:
-```bash
-pip install -r requirements.txt
-```
+## 📈 Roadmap
+- Add multi-source event detection
+- Improve summarization quality
+- Test new message styles for engagement
 
-2. Configure settings in `config/settings.py`:
-   - Update API keys
-   - Configure stock symbol
-   - Set Telegram bot token and chat ID
-
-3. Run the script:
-```bash
-python src/stock_summary.py
-```
-
-## Configuration
-
-All configuration settings are stored in `config/settings.py`:
-- Stock symbol
-- API credentials
-- Telegram bot settings
-
-## Dependencies
-
-- requests: For making HTTP requests
-- google-generativeai: For AI-powered news summarization
-- pytz: For handling timezone conversions
+## 📄 License
+MIT License
